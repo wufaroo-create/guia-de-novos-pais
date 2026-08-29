@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  background-color: #fbf8f3;
+  color: #2b2926;
+}
+
+.font-serif {
+  font-family: "Fraunces", Georgia, serif;
+  font-optical-sizing: auto;
+}
+
+::selection {
+  background-color: #c5d2bc;
+  color: #1f1d1b;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-terra-500 px-7 py-4 text-base font-semibold text-cream-50 shadow-soft transition-all duration-300 hover:bg-terra-600 hover:shadow-lift active:scale-[0.98] sm:px-8;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-terra-300 bg-white px-7 py-4 text-base font-semibold text-terra-600 transition-all duration-300 hover:border-terra-400 hover:bg-terra-100 active:scale-[0.98];
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-sage-200 bg-sage-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-sage-600;
+  }
+  .card {
+    @apply rounded-3xl border border-cream-200 bg-white p-7 shadow-soft transition-all duration-300;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Hide scrollbar for preview carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
